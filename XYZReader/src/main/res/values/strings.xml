@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">XYZ Reader</string>
+    <string name="welcome_xyz_reader">Welcome to XYZ Reader!</string>
+
+    <string name="action_refresh">Refresh</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+
+    <string name="up">Up</string>
+    
+    <string name="transitionImage">transition_photo</string>
+    <string name="noInternetAvailable">The network is not available. Please check the internet connection.</string>
+    <string name="no_information_available">No information available.</string>
+    <string name="thumbnail_image_of_article">Thumbnail Image of Article</string>
+</resources>
