@@ -1,5 +1,4 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="@dimen/card_inside_margin"
@@ -20,6 +19,7 @@
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:scaleType="centerCrop"
             />
 
 
@@ -32,7 +32,7 @@
             android:paddingLeft="@dimen/card_inside_text_padding"
             android:paddingTop="@dimen/card_inside_text_padding"
             android:paddingRight="@dimen/card_inside_text_padding"
-            android:textColor="@color/light_gray"
+            android:textColor="@color/light_textColor"
             android:ellipsize="end"
             android:maxLines="2" />
 
@@ -44,7 +44,7 @@
             android:paddingLeft="@dimen/card_inside_text_padding"
             android:paddingRight="@dimen/card_inside_text_padding"
             android:paddingTop="@dimen/card_inside_text_padding"
-            android:textColor="@color/light_gray"
+            android:textColor="@color/light_textColor"
             android:maxLines="1"
             android:ellipsize="end" />
 
@@ -56,7 +56,7 @@
             android:paddingLeft="@dimen/card_inside_text_padding"
             android:paddingRight="@dimen/card_inside_text_padding"
             android:paddingBottom="@dimen/card_inside_text_padding"
-            android:textColor="@color/light_gray"
+            android:textColor="@color/light_textColor"
             android:maxLines="1"
             android:ellipsize="end"
             />

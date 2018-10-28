@@ -17,9 +17,9 @@
 
 <resources>
     <color name="color_primary">#151c25</color>
-    <color name="color_primary_dark">#151c25</color>
+    <color name="color_primary_dark">#000000</color>
     <color name="color_accent">#f8ca0c</color>
 
-    <color name="dark_gray">#424242</color>
-    <color name="light_gray">#eeeeee</color>
+    <color name="dark_textColor">#424242</color>
+    <color name="light_textColor">#eeeeee</color>
 </resources>

@@ -1,6 +1,7 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/draw_insets_frame_layout"
 
     android:layout_width="match_parent"
@@ -61,7 +62,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-                        android:textColor="@color/light_gray"
+                        android:textColor="@color/light_textColor"
                         android:textStyle="bold"
                         android:lineSpacingMultiplier="0.9"
                         />
@@ -71,7 +72,7 @@
                         style="?android:attr/textAppearanceSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/light_gray" />
+                        android:textColor="@color/light_textColor" />
                 </LinearLayout>
 
             </FrameLayout>
@@ -99,15 +100,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:transitionGroup="true">
+            android:transitionGroup="true"
+            tools:targetApi="lollipop">
 
             <TextView
                 android:id="@+id/artBody"
                 style="?android:attr/textAppearanceMedium"
-                android:textColor="@color/dark_gray"
+                android:textColor="@color/dark_textColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorLink="@color/color_accent"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -129,7 +130,6 @@
         android:src="@drawable/ic_share"
         android:contentDescription="@string/action_share"
         android:clickable="true"
-        android:background="@drawable/add_fab_background"
         app:elevation="@dimen/fab_elevation"
         app:layout_anchor="@id/appbar"
         app:layout_anchorGravity="bottom|end"

@@ -9,6 +9,7 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -113,6 +114,7 @@ public class ArticleDetailActivity extends AppCompatActivity
                 }
             }
         });
+        mPager.setPageTransformer(false, new Transformer());
     }
 
     @Override
@@ -186,5 +188,34 @@ public class ArticleDetailActivity extends AppCompatActivity
         }
     }
 
+
+    public class Transformer implements ViewPager.PageTransformer {
+        @Override
+        public void transformPage(@NonNull View page, float position) {
+            if (position <= -1 || position >= 1) {
+//                page.setAlpha(0.0F);
+            } else if (position == 0.0f) {
+//                page.setAlpha(1);
+            } else {
+                page.findViewById(R.id.thumbnail)
+                        .setTranslationX(-position * page.getWidth() / 2);
+
+                page.findViewById(R.id.artTitle)
+                        .setTranslationX(-position * page.getWidth() / 2);
+                page.findViewById(R.id.artTitle)
+                        .setAlpha(1.0f - Math.abs(position));
+
+                page.findViewById(R.id.artByline)
+                        .setTranslationX(-position * page.getWidth() / 2);
+                page.findViewById(R.id.artByline)
+                        .setAlpha(1.0f - Math.abs(position));
+
+                page.findViewById(R.id.share_fab)
+                        .setRotation(-position * page.getWidth() / 2);
+
+//                page.setAlpha(1.0f - Math.abs(position));
+            }
+        }
+    }
 
 }
